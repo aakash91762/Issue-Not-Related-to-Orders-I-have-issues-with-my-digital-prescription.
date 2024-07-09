@@ -162,7 +162,11 @@
             var consultationid = params.get('consultationid')
             var issue = params.get('issue')
             var allergy = params.get('allergy')
-    
+            var order_id = params.get('OrderID');
+
+            if (order_id) {
+        document.getElementById("consultationid").setAttribute("value", order_id)
+      }
             document.getElementById('allergy').hidden = true;
             console.log({ issue, allergy, language });
             document.getElementById('issue').addEventListener("change", function () {
